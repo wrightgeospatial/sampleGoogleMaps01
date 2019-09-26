@@ -1,0 +1,181 @@
+<html>
+<head>
+    <title>Shop Entry Form</title>
+<!-- Special version of Bootstrap that only affects content wrapped in .bootstrap-iso -->
+<link rel="stylesheet" href="https://formden.com/static/cdn/bootstrap-iso.css" /> 
+
+<!-- Inline CSS based on choices in "Settings" tab -->
+<style>.bootstrap-iso .formden_header h2, .bootstrap-iso .formden_header p, .bootstrap-iso form{font-family: Arial, Helvetica, sans-serif; color: black}.bootstrap-iso form button, .bootstrap-iso form button:hover{color: white !important;} .asteriskField{color: red;}</style>
+</head>
+
+<body>
+    
+
+<!-- HTML Form (wrapped in a .bootstrap-iso div) -->
+<div class="bootstrap-iso">
+ <div class="container-fluid">
+  <div class="row">
+   <div class="col-md-6 col-sm-6 col-xs-12">
+    <form method="post">
+    <div class="form-group ">
+        <label class="control-label requiredField" for="shop_Address">
+            Shop Address
+            <span class="asteriskField">
+                *
+            </span>
+        </label>
+        <input class="form-control" id="shop_Address" name="shop_Address" placeholder="603 A. Cape St. Savannah, GA."
+            type="text" />
+    </div>
+    
+    <div class="form-group ">
+        <label class="control-label " for="Facebook_Review">
+            Facebook Review
+        </label>
+        <input class="form-control" id="Facebook_Review" name="Facebook_Review" placeholder="https://www.facebook.com/review/6876ggj"
+            type="text" />
+    </div>
+    
+    <div class="form-group ">
+        <label class="control-label " for="Google_Review">
+            Google Review
+        </label>
+        <input class="form-control" id="Google_Review" name="Google_Review" placeholder="https://www.google.com/review/6876ggj" type="text" />
+    </div>
+    
+    <div class="form-group ">
+        <label class="control-label " for="Instagram_Review">
+            Instagram Review
+        </label>
+        <input class="form-control" id="Instagram_Review" name="Instagram_Review" placeholder="https://www.instagram.com/review/6876ggj"
+            type="text" />
+    </div>
+    
+    <div class="form-group ">
+        <label class="control-label " for="SnapChat_Review">
+            SnapChat Review
+        </label>
+        <input class="form-control" id="SnapChat_Review" name="SnapChat_Review" placeholder="https://www.snapchat.com/review/6876ggj" type="text" />
+    </div>
+
+    <div class="form-group ">
+        <label class="control-label " for="Twitter_Review">
+            Twitter Review
+        </label>
+        <input class="form-control" id="Twitter_Review" name="Twitter_Review" placeholder="https://www.twitter.com/review/6876ggj"
+            type="text" />
+    </div>
+
+    <div class="form-group ">
+        <label class="control-label " for="youTube">
+            YouTube Channel
+        </label>
+        <input class="form-control" id="youTube" name="youTube" placeholder="https://www.youtube.com/channel/6876ggj"
+            type="text" />
+    </div>
+    
+    <div class="form-group ">
+        <label class="control-label requiredField" for="fullbay">
+            Fullbay Code
+            <span class="asteriskField">
+                *
+            </span>
+        </label>
+        <input class="form-control" id="fullbay" name="fullbay" placeholder="YYUOIK" type="text" />
+    </div>
+    
+    <div class="form-group ">
+        <label class="control-label requiredField" for="laborRate">
+            Labor Rate ($ Per Hr)
+            <span class="asteriskField">
+                *
+            </span>
+        </label>
+        <input class="form-control" id="laborRate" name="laborRate" placeholder="95" type="text" />
+    </div>
+    
+    <div class="form-group ">
+        <label class="control-label " for="shopLogo">
+            Shop Logo URL
+        </label>
+        <input class="form-control" id="shopLogo" name="shopLogo" placeholder="https://www.pic.com/smile.png" type="text" />
+    </div>
+    
+    <div class="form-group ">
+        <label class="control-label requiredField" for="shopName">
+            Shop Name
+            <span class="asteriskField">
+                *
+            </span>
+        </label>
+        <input class="form-control" id="shopName" name="shopName" placeholder="My Shop" type="text" />
+    </div>
+    
+    <div class="form-group ">
+        <label class="control-label " for="state">
+            State
+        </label>
+        <input class="form-control" id="state" name="state" placeholder="GA" type="text" />
+    </div>
+    
+    <div class="form-group ">
+        <label class="control-label " for="webURL">
+            Web URL
+        </label>
+        <input class="form-control" id="webURL" name="webURL" placeholder="https://www.site.com/" type="text" />
+    </div>
+    
+    <div class="form-group ">
+        <label class="control-label " for="zipCode">
+            Zip Code
+        </label>
+        <input class="form-control" id="zipCode" name="zipCode" placeholder="31401"
+            type="text" />
+    </div>
+    
+    <div class="form-group ">
+        <label class="control-label requiredField" for="shopLat">
+            Latitude
+            <span class="asteriskField">
+                *
+            </span>
+        </label>
+        <input class="form-control" id="shopLat" name="shopLat" placeholder="42.54600" type="text" />
+    </div>
+    
+    <div class="form-group ">
+        <label class="control-label requiredField" for="shopLng">
+            Longitude
+            <span class="asteriskField">
+                *
+            </span>
+        </label>
+        <input class="form-control" id="shopLng" name="shopLng" placeholder="-75.08000" type="text" />
+    </div>
+    
+    <div class="form-group">
+        <div>
+            <button onclick='writeDataE();' class="btn btn-primary " name="submit" type="submit">
+                Submit
+            </button>
+        </div>
+    </div>
+
+    </form>
+   </div>
+  </div>
+ </div>
+</div>
+
+<!-- Initialize Firbase Database -->
+<script src="https://www.gstatic.com/firebasejs/5.4.0/firebase.js"></script>
+<script type="text/javascript" src="firebase\init.js"></script>
+
+<script type="text/javascript" src="entry.js"></script>
+<!-- Initialize Firbase Database END-->
+
+
+</body>
+
+
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Map: Hausmann's Diesel Performance LLC</title>
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+    
+    <link rel="stylesheet" href="css\style.css">
+
+    <!-- FORM Function & JQuery START -->
+    <!-- Vue Application Start -->
+    <script type="text/javascript" src="scripts\vue.js"></script>
+
+    <!--Ingest JQuery CDN-->
+    <script   src="https://code.jquery.com/jquery-2.1.0.js"   integrity="sha256-D6d1KSapXjq2tfZ6Ie9AYozkRHyB3fT2ys9mO2+4Wvc="   crossorigin="anonymous"></script>
+           
+    <!-- Check JQuery -->
+    <script type="text/javascript" src="scripts\jqCheck.js"></script>
+
+    <!-- FORM Bootstrap START -->
+    <!-- Special version of Bootstrap that only affects content wrapped in .bootstrap-iso -->
+    <link rel="stylesheet" href="https://formden.com/static/cdn/bootstrap-iso.css" />
+
+    <!--Font Awesome (added because you use icons in your prepend/append)-->
+    <link rel="stylesheet" href="https://formden.com/static/cdn/font-awesome/4.4.0/css/font-awesome.min.css" />
+
+     <!-- Inline CSS based on choices in "Settings" tab -->
+    <style>.bootstrap-iso .formden_header h2, .bootstrap-iso .formden_header p, .bootstrap-iso form{font-family: Arial, Helvetica, sans-serif; color: black}.bootstrap-iso form button, .bootstrap-iso form button:hover{color: white !important;} .asteriskField{color: red;}</style>
+     <!-- FORM Bootstrap END -->
+           
+
+  </head>
+  <body>
+    <div id="map"></div>
+    <script>
+      var map;
+    
+      function initMap() {
+              map = new google.maps.Map(document.getElementById('map'), {
+                  center: new google.maps.LatLng(42.546207, -75.080011),
+                  zoom: 4,
+                  mapTypeId: 'roadmap', //'satellite',  'roadmap',  'terrain', 'hybrid'
+                  mapTypeControl: true,
+                  mapTypeControlOptions: {
+                      style: google.maps.MapTypeControlStyle.HORIZONTAL_BAR,
+                      position: google.maps.ControlPosition.TOP_RIGHT
+                  }
+              });
+          }
+    </script>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDRWv3P-nkFqDGfzArWfbqdKxNVbcKtxzI&callback=initMap"async defer></script>
+    
+    <!-- Geocode CDN Json Output -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <!-- END Geocode CDN Json Output -->
+    
+    <!-- Vue JS App Start -->
+    <div id='app'>
+    
+        <img @click='dbOn2' id="showDataIcon" title="Show Data" src="images/dataBase.png">
+        <img @click='geoCodeZip' id="geocodeZip" title="Search Around Zip Code" src="images/zip02.png">
+      
+    </div>
+
+    <script type="text/javascript" src="scripts\vm.js"></script>
+    <!-- Vue JS App END -->
+    <!-- Initialize Firbase Database -->
+    <script src="https://www.gstatic.com/firebasejs/5.4.0/firebase.js"></script>
+    <script type="text/javascript" src="firebase\init.js"></script>
+    <!-- Initialize Firbase Database END-->
+
+    
+
+    
+
+  </body>
+</html>
+   
