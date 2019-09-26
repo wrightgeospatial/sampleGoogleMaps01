@@ -265,7 +265,7 @@ methods: {
                 if(childData.SnapChat === "" || childData.SnapChat === 'noData'){
                     // alert('IG NoData');
                     scString = '<a name = "here"><img id = "infoIMG" width = 30px src='
-                    + 'images/SnapChat_noData.png title="No SnapChat Review"></a>'
+                    + 'images/SnapChat-noData.png title="No SnapChat Review"></a>'
                 }else{
                     // alert('IG Got Data');
                     scString = '<a href =' + childData.SnapChat + ' download><img id = "infoIMG" width = 30px src=images/SnapChat.png title="SnapChat Review"></a>'
