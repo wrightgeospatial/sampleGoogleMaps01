@@ -47,9 +47,19 @@
                   }
               });
           }
+
+          function loadScript() {
+              var script = document.createElement('script');
+              script.type = 'text/javascript';
+              script.src = "https://maps.googleapis.com/maps/api/js?key=" + prompt("Enter a Valid Google Maps API Key") + "&callback=initMap";
+              document.body.appendChild(script);
+            }
+            window.onload = function () {
+              loadScript();
+            };
     </script>
 
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDRWv3P-nkFqDGfzArWfbqdKxNVbcKtxzI&callback=initMap"async defer></script>
+    
     
     <!-- Geocode CDN Json Output -->
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
